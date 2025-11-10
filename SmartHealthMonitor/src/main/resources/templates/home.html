@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Health Monitor - Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        /* Center layout */
+        body {
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .home-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 255, 200, 0.4);
+            width: 350px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 26px;
+            color: #00ffd0;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: linear-gradient(90deg, #00ffd0, #0099ff);
+            transform: translateY(-2px);
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-container">
+        <h1>Smart Health Monitor</h1>
+        <div class="nav-links">
+            <a th:href="@{/patients/view}">Patient Management</a>
+            <a th:href="@{/doctors/view}">Doctor Management</a>
+            <a th:href="@{/appointments/view}">Appointment Management</a>
+            <a th:href="@{/users/view}">User Management</a>
+        </div>
+        <footer>© 2025 Smart Health Monitor</footer>
+    </div>
+</body>
+</html>
